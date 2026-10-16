@@ -1,0 +1,38 @@
+# Vendored upstream copies (not our source)
+rea-main/
+
+# REA / game-analysis working data: third-party binaries and generated output
+msdzls/client-cache/
+msdzls/decompiled/
+# 整份反编译副本与临时工作区（同上：第三方反编译产物，不入库）
+msdzls/verify_patch/
+msdzls/verify_patch2/
+msdzls/patch_skip/
+msdzls/tmp/
+# tools/ 下多为第三方二进制/运行时，只保留我们自己的脚本
+msdzls/tools/*
+!msdzls/tools/decompile-swf.ps1
+msdzls/**/*.swf
+msdzls/**/*.dat
+
+# Common tooling output
+node_modules/
+dist/
+.cache/
+
+# Local server runtime output (logs + captured WInINet URL dump)
+msdzls/server/*.log
+msdzls/server/*.log.*
+msdzls/server/*.err*
+msdzls/server/wincache-urls.txt
+msdzls/server/.session-key
+
+# 诊断截图 / 一次性备份 / 采集产物
+msdzls/server/_*.png
+msdzls/server/*.bak
+msdzls/server/*.bak-*
+msdzls/server/*.brk-*
+msdzls/server/save.json.pre-*
+
+# Codex 会话恢复产物
+.acl-recovery/
